@@ -10,6 +10,7 @@ ecommerce:
       args:
         region: !secret aws.region
         partial_bucket_name: "order-tracker-bucket"
+        tags: '{"deployment" = "ecommerce", "environment" = "production", "type" = "datastore", "security" = "crown-jewels"}'
       outputs:
         - bucket_name
     - name: order-tracker-lambda
@@ -55,7 +56,6 @@ ecommerce:
       extension: RDS
       needs:
         - ecommerce-orders-db-auth
-      tags: infrastructure
       args:
         vpc_id: !lookup /aws-k8s/k8s/outputs/vpc_id
         subnet1: !lookup /aws-k8s/k8s/outputs/private_subnet_id,0
@@ -64,6 +64,8 @@ ecommerce:
         password: !lookupSecret /ecommerce-orders-db-auth/outputs/db_password
         publicly_accessible: "true"
         name: "order"
+        tags: '{"deployment" = "ecommerce", "environment" = "production", "type" = "datastore", "security" = "crown-jewels"}'
+        sg_tags: '{"deployment" = "ecommerce", "environment" = "production", "type" = "network", "security" = "internet-exposed"}'
         engine: "mysql"
 
     - name: ecommerce

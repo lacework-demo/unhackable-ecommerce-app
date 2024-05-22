@@ -10,6 +10,7 @@ ecommerce:
       args:
         region: !secret aws.region
         partial_bucket_name: "order-tracker-bucket"
+        tags: '{"deployment" = "ecommerce", "environment" = "production", "type" = "datastore", "security" = "crown-jewels",}'
       outputs:
         - bucket_name
     - name: order-tracker-lambda
