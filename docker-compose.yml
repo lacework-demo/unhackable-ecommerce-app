@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   ecommerce-frontend:
-    image: detcaccounts/ecommerce-website
+    image: lwgithub0/ecommerce-website
     stdin_open: true
     tty: true
     restart: always
@@ -16,7 +16,7 @@ services:
       - ecommerce-order
       - ecommerce-inventory
   ecommerce-inventory:
-    image: detcaccounts/ecommerce-inventory
+    image: lwgithub0/ecommerce-inventory
     ports:
       - "9001:9001"
     restart: always
@@ -40,7 +40,7 @@ services:
       - POSTGRES_DB=inventory
       - POSTGRES_PASSWORD=postgres
   ecommerce-order:
-    image: detcaccounts/ecommerce-order
+    image: lwgithub0/ecommerce-order
     ports:
       - "9002:9001"
     restart: always
@@ -67,7 +67,7 @@ services:
       - MYSQL_PASSWORD=postgres
       - MYSQL_RANDOM_ROOT_PASSWORD=true
   ecommerce-login:
-    image: detcaccounts/ecommerce-login
+    image: lwgithub0/ecommerce-login
     ports:
       - "9003:9001"
     restart: always

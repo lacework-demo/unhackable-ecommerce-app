@@ -1,6 +1,6 @@
 # Unhackable eCommerce web app
 
-This app is a very simple ecommerce web site for Unhackable Inc. 
+This app is a very simple ecommerce web site for Unhackable Inc.
 
 > Note: This application is for demonstration purposes only
 
@@ -19,7 +19,7 @@ Deployment is handled via the `detc` tool; execute the plan corresponding to you
 
 ## Buidling Conatiners
 
-    docker build -t detcaccounts/ecommerce-website -f docker/Dockerfile_ecommerce .
-    docker build -t detcaccounts/ecommerce-order -f docker/Dockerfile_order-service .
-    docker build -t detcaccounts/ecommerce-inventory -f docker/Dockerfile_datalayer .
-    docker build -t detcaccounts/ecommerce-login -f docker/Dockerfile_datalayer .
+    docker build -t lwgithub0/ecommerce-website -f docker/Dockerfile_ecommerce .
+    docker build -t lwgithub0/ecommerce-order -f docker/Dockerfile_order-service .
+    docker build -t lwgithub0/ecommerce-inventory -f docker/Dockerfile_datalayer .
+    docker build -t lwgithub0/ecommerce-login -f docker/Dockerfile_datalayer .

@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: ecommerce-website
-        image: detcaccounts/ecommerce-website
+        image: lwgithub0/ecommerce-website
         securityContext:
           privileged: true
         env:
@@ -86,7 +86,7 @@ spec:
     spec:
       containers:
       - name: ecommerce-login
-        image: detcaccounts/ecommerce-login
+        image: lwgithub0/ecommerce-login
         env:
         - name: NODB
           value: "true"
@@ -127,7 +127,7 @@ spec:
     spec:
       containers:
       - name: ecommerce-inventory
-        image: detcaccounts/ecommerce-inventory
+        image: lwgithub0/ecommerce-inventory
         env:
         - name: DATABASE_TYPE
           value: "postgres"
@@ -266,7 +266,7 @@ spec:
     spec:
       containers:
       - name: ecommerce-order
-        image: detcaccounts/ecommerce-order
+        image: lwgithub0/ecommerce-order
         env:
         - name: DATABASE_TYPE
           value: "mysql"
